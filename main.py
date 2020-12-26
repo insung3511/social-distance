@@ -184,7 +184,7 @@ def printRisk(self):
     warnPerson = int(highRisk) + int(low_Risk)
     
     percentagePerson = int(noneCompliance)
-    web_result = "인구 : " + wholePerson + "(명)\n미준수 : " + warnPerson + "(명)\n미준수 비율 : " + percentagePerson + "(%)"
+#    web_result = "인구 : " + wholePerson + "(명)\n미준수 : " + warnPerson + "(명)\n미준수 비율 : " + percentagePerson + "(%)"
     return web_result
 
 if __name__== "__main__":
