@@ -1,5 +1,4 @@
 # social-distance
-COVID-19 Social Distance Check Project using openCV
+사회적 거리두기를 시각화 하며 측정을 하는 CCTV 프로젝트 이다. 사실 이게 선린인터넷고등학교 2020 IoT 경진대회 때문에 시작하게 된 프로젝트이다.
 
 # 님 설명이 없는뎁쇼?
-좀 기다려봐요. 내가 이것만 하진 않아요;
