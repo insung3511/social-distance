@@ -1,7 +1,7 @@
-<div style="text-align:center">
+<div align="center" style="text-align:center">
 
 # Korean
-If you wanna read English version document <a href="eng-version">Click here</a>
+If you wanna read English version document <a href="#eng-version">Click here</a>
 </div>
 
 # social-distance
@@ -32,7 +32,7 @@ Raspberry Pi Camera v2
 </pre>
 
 # Directory
-가장 중요한 Python 파일 아래와 동일하다.
+가장 중요한 Python 파일들은 아래와 동일하다.
 ```python
 main.py 
 plot.py
@@ -44,6 +44,12 @@ utils.py
 ```
 안에 모두 담아 두었다. 프론트 엔드 같은 경우는 경진대회에서 같이 진행 했던 민서가 모두 만들었다. <BR> 
 <strong>SHOUT OUT TO M.S.</strong>
+
+# Run
+```bash
+$ python main.py
+```
+단 OpenCV와 numpy가 정-상적으로 설치가 되어있다는 가정하에 해야한다. 또한 OpenCV를 pip를 통한 설치보다는 build를 통한 설치를 추천한다. 이유는 pip로 설치하는 경우에는 Pre-CPU 가 된 모듈을 받아 설치하는거라 빌드가 안된다. 가공식품과 직접 요리 하는 것의 차이라고 생각하면 된다.
 
 # 실행 순서도
 말로 설명하기에는 너무나도 복잡한데 막상 보면 간단함. 이게 무슨 말인지는 직접 사진을 보시고 판단 해주시길... 
@@ -77,11 +83,96 @@ yolov3 의 모델은 훌륭한 모델이다. 진짜로. 굉장히 빠른 속도�
 
 ~~오해의 요지가 있을까봐 작성해둡니다. 그.. 여기 보면 CSS 파일이 굉장히 많아서 제가 CSS코드를 많이 작성한 줄 알거 같은데 아닙니다..~~ <br> <br>
 Jan.16.2021. 일단 파일 정리를 하긴 했지만 아직 불필요한 파일들이 더 있을거 같다. 지속적으로 정리를 할 예정
+
 # My final comment
 일단 라즈베리파이 너무 뜨거워서 손은 정말 따뜻했다. 방열판은 진짜 필수 이고 라즈베리파이 전압이 굉장히 부족했다. 그래서 하다가 터질까봐 많이 불안하다가 다행히도 안 터졌다. 
 
-<div style="text-align:center" id="eng-version">
+<div align="center" style="text-align:center" id="eng-version">
 
 # English
 
 </div>
+
+# social-distance
+It is a CCTV project that visualizes and measures social distance. In fact, the project started because of the IoT contest held at Sunrin Internet High School in 2020. Actually, I'm using README.md, but I think it'll be almost the same as the report I submitted to school.
+
+# What did I used it?
+## macOS
+<pre>
+./Software
+macOS Catlina (It was Catalina at the time of development, but now using Big Sur.)
+Python 3.9
+openCV 4.4.0
+
+./Hardware
+Facetime Webcam
+Just my Macbook Pro (early, 2015)
+</pre>
+
+## Raspberry Pi
+<pre>
+./Software
+Raspberry Pi OS
+Python 3.7.2 (virtuelenv)
+openCV 4.1.1 (virtuelenv)
+
+./Hardware
+Raspberry Pi Camera v2
+</pre>
+
+# Directory
+The most important Python files are:
+```python
+main.py 
+plot.py
+utils.py
+```
+and frontend files are:
+```HTML
+./Iot_Contest/frontend/
+```
+I have placed it in the directory I created above. In the case of the front end, it was produced by Minseo, who worked on the project together. <BR> 
+<strong>SHOUT OUT TO M.S.</strong>
+~~For your information, Minseo is a our club members.~~
+
+# Run
+```bash
+$ python main.py
+```
+OpenCV and numpy must be installed normally. It is also recommended that you install OpenCV through a build instead of installing pip. This is because if you install it as a pip, you will receive a pre-CPU module and cannot build it. You can think of it as the difference between processed food and cooking it yourself.
+
+# Operating Principles
+It's too complicated to explain in words, but it's simple. I want you to look at the picture and see what it means.
+![working1](./images/pic1.png)
+![working2](./images/pic2.png)
+![working3](./images/pic3.png)
+![working4](./images/pic4.png)
+Here are some of the key (?) content that Human Detection leverages yolov3. Using the <a href="./models/yolov3.cfg">yolov3.cfg</a> model on main.py includes screen conversion, importing coordinates, and person detection on plot.py. For your information, it doesn't work if you turn it as it is. ~~That's not my fault!~~
+<br> <br>
+
+They say that they cannot upload more than 100MB of files to GitHub. I deleted it because there was an error while using Github Desktop when uploading. Therefore, if you want to use this code, you must download the <a href="https://pjreddie.com/media/files/yolov3.weights">model</a>. After download the model, you must moved it and put it in the __./model__ directory.
+
+# Final Result!
+![Safari Capture Image](./images/pic5.png)
+![Physica Real Photo](./images/pic6.png)
+This is the result of the test at the Coex library in Samseong-dong before the presentation.
+
+# The part planned but not implemented.
+First of all, it's a timetable. The goal was to save people every hour and save them in the DB, but I couldn't pay attention to this as I kept focusing on social distancing.
+
+# Why did you go to the library?
+The reason is really simple. It's because of the lighting. <br> <br>
+
+The model of yolov3 is a great model. A very fast model that can detect very low specification objects. However, it is inevitable to be affected by the lighting. One of the factors that inevitably affect the processing of computer images. The shadow is greatly reduced because constant lighting is always done indoors. Of course, the ceiling of the library is glass, so it is open, but the lighting is the same. <br> <br>
+
+Also, the main goal of the project is to measure social distance, so the spread of corona in poorly ventilated areas is more serious than outdoors. So I decided that the COEX library is the most suitable. <br> <br>
+
+The test was conducted in several places besides Stade. Although it was purchased as POSCO (?) Tessa, it was not suitable as a test site to check whether there were no angles or whether the lighting was emotional. Also, if you do it through the window, the tree in front of you will reduce the recognition rate of people. <br> <br>
+
+# Yo, man' Clean up the files...
+As you know, I tried to do something wrong, but it suddenly didn't work. So I am uploading the dump file because it will be a waste of time.
+
+I'm writing it in case you get misunderstood. As you can see here, there are so many CSS files that there are many CSS codes, but the actual amount of code used is very small.
+
+January 16, 2021. I cleaned up the file, but I think there are still more unnecessary files. It is configured continuously.
+
