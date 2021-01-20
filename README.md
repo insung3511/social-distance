@@ -1,3 +1,9 @@
+<div style="text-align:center">
+
+# Korean
+If you wanna read English version document <a href="eng-version">Click here</a>
+</div>
+
 # social-distance
 사회적 거리두기를 시각화 하며 측정을 하는 CCTV 프로젝트 이다. 사실 이게 선린인터넷고등학교 2020 IoT 경진대회 때문에 시작하게 된 프로젝트이다. 사실 리드미를 작성해보니 아마 보고서랑 거의 비슷하게 갈거 같긴 한듯. 
 
@@ -73,3 +79,9 @@ yolov3 의 모델은 훌륭한 모델이다. 진짜로. 굉장히 빠른 속도�
 Jan.16.2021. 일단 파일 정리를 하긴 했지만 아직 불필요한 파일들이 더 있을거 같다. 지속적으로 정리를 할 예정
 # My final comment
 일단 라즈베리파이 너무 뜨거워서 손은 정말 따뜻했다. 방열판은 진짜 필수 이고 라즈베리파이 전압이 굉장히 부족했다. 그래서 하다가 터질까봐 많이 불안하다가 다행히도 안 터졌다. 
+
+<div style="text-align:center" id="eng-version">
+
+# English
+
+</div>
