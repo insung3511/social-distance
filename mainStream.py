@@ -10,20 +10,11 @@ thresh = 0.5
 mouse_pts = []
 encodingImg = 0
 
-def encodingImage(image):
-    resultImage = cv2.imencode(image)
-    reutrn resultImage
-
 class VideoCamera(object):
     def get_frame(self):
         
         ret, jpeg = cv2.imencode('.jpg', image)
         return jpeg.tobytes()
-        
-def personPoint(p1, p2):
-  	mdP = (p1 + p2)
-   	mdP = mdP / 2
-   	return int(round(mdP))
 
 def get_mouse_points(event, x, y, flags, param):
     global mouse_pts

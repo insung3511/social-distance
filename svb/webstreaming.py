@@ -1,4 +1,4 @@
-from flask import render_template
+'''from flask import render_template
 from flask import Response
 from flask import Flask
 
@@ -18,4 +18,4 @@ def generate(camera):
 def video_feed():
 	return Response(gen(), 
 					mimetype='multipart/x-mixed-replace;
-					boundary=frame')
+					boundary=frame')'''

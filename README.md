@@ -70,18 +70,19 @@ $ python main.py
 가장 먼저 Time table이다. 각 시간 마다 사람 명 수를 저장하여 DB에 저장하는 것이 목표 였으나 사회적 거리두기에 중점을 두고 계속 진행을 하다 보니 이 부분은 신경 쓰지 못한 것 같다. 
 
 # 이 시국에 굳이 별마당?
-이유는 진짜 간단하다. 조명 때문이다. <br> <br>
-yolov3 의 모델은 훌륭한 모델이다. 진짜로. 굉장히 빠른 속도로 낮은 사양에서도 빠르게 Object Detection이 가능한 모델 이기 때문이다. 하지만 조명의 영향을 받는 것은 어쩔수 없는 사실이다. 컴퓨터 시각처리를 진행하면 어쩔수 없이 영향을 받게 되는 요소 중 하나이다. 실내에서는 항상 일정한 조명을 쏘기 때문에 그림자가 여러 방해 요소들이 확 줄어든다. 물론 별마당 도서관의 천장이 유리로 되어 있어서 뚫려 있기는 한다 하지만 그래도 일정 조명은 똑같은 조명이다. <br> <br>
+이유는 진짜 간단하다. 조명 때문이다. <br> 
+yolov3 의 모델은 훌륭한 모델이다. 진짜로. 굉장히 빠른 속도로 낮은 사양에서도 빠르게 Object Detection이 가능한 모델 이기 때문이다. 하지만 조명의 영향을 받는 것은 어쩔수 없는 사실이다. 컴퓨터 시각처리를 진행하면 어쩔수 없이 영향을 받게 되는 요소 중 하나이다. 실내에서는 항상 일정한 조명을 쏘기 때문에 그림자가 여러 방해 요소들이 확 줄어든다. 물론 별마당 도서관의 천장이 유리로 되어 있어서 뚫려 있기는 한다 하지만 그래도 일정 조명은 똑같은 조명이다. <br> 
 
 또한 이 프로젝트의 주 목표는 사회적 거리두기의 측정인 만큼 통풍이 잘 되지 않는 곳에서 코로나 확산은 실외보다 더더욱 심하다. 그렇기 때문에 별마당 도서관이 가장 적당하다고 판단을 하였다.
-<br>
+
 <br> 
 별마당 외에도 여러 장소에서 테스트를 진행 하였다. 테사로사 POSCO(?) 에서도 해봤는데 각도가 안나오고 조명이 감성 조명이라고 해야하나 한 쪽만 내리 찍는 조명인지랑 테스트 장소로서 적합하지가 않았다. 또한 창문으로 하게 되면 반사가 생기고 앞에 나무들 때문에 사람 인식율이 떨어진다. 다른 쪽으로 간다 해도 건물들이 있다. ~~아니 일단 무엇보다 반사가 너무 불편해~~. 별마당이 개인적으로는 가장 좋았다. 단점으로는 눈치게임 자리 잡기.. 
 
 # 아니 파일 정리좀..
-그게 있잖아요,, 저도 할려고 했는데 이게 뭐 하나 잘못 지웠다가 갑자기 싹다 다 안되서 다시 수정하고 시간 낭비할거 같아서 그냥 덤프 파일 그대로 올립니다... <br> <br>
+그게 있잖아요,, 저도 할려고 했는데 이게 뭐 하나 잘못 지웠다가 갑자기 싹다 다 안되서 다시 수정하고 시간 낭비할거 같아서 그냥 덤프 파일 그대로 올립니다...  <br>
 
-~~오해의 요지가 있을까봐 작성해둡니다. 그.. 여기 보면 CSS 파일이 굉장히 많아서 제가 CSS코드를 많이 작성한 줄 알거 같은데 아닙니다..~~ <br> <br>
+~~오해의 요지가 있을까봐 작성해둡니다. 그.. 여기 보면 CSS 파일이 굉장히 많아서 제가 CSS코드를 많이 작성한 줄 알거 같은데 아닙니다..~~ <br> 
+
 Jan.16.2021. 일단 파일 정리를 하긴 했지만 아직 불필요한 파일들이 더 있을거 같다. 지속적으로 정리를 할 예정
 
 # My final comment
@@ -148,7 +149,7 @@ It's too complicated to explain in words, but it's simple. I want you to look at
 ![working3](./images/pic3.png)
 ![working4](./images/pic4.png)
 Here are some of the key (?) content that Human Detection leverages yolov3. Using the <a href="./models/yolov3.cfg">yolov3.cfg</a> model on main.py includes screen conversion, importing coordinates, and person detection on plot.py. For your information, it doesn't work if you turn it as it is. ~~That's not my fault!~~
-<br> <br>
+<br>
 
 They say that they cannot upload more than 100MB of files to GitHub. I deleted it because there was an error while using Github Desktop when uploading. Therefore, if you want to use this code, you must download the <a href="https://pjreddie.com/media/files/yolov3.weights">model</a>. After download the model, you must moved it and put it in the __./model__ directory.
 
@@ -161,13 +162,13 @@ This is the result of the test at the Coex library in Samseong-dong before the p
 First of all, it's a timetable. The goal was to save people every hour and save them in the DB, but I couldn't pay attention to this as I kept focusing on social distancing.
 
 # Why did you go to the library?
-The reason is really simple. It's because of the lighting. <br> <br>
+The reason is really simple. It's because of the lighting. <br>
 
-The model of yolov3 is a great model. A very fast model that can detect very low specification objects. However, it is inevitable to be affected by the lighting. One of the factors that inevitably affect the processing of computer images. The shadow is greatly reduced because constant lighting is always done indoors. Of course, the ceiling of the library is glass, so it is open, but the lighting is the same. <br> <br>
+The model of yolov3 is a great model. A very fast model that can detect very low specification objects. However, it is inevitable to be affected by the lighting. One of the factors that inevitably affect the processing of computer images. The shadow is greatly reduced because constant lighting is always done indoors. Of course, the ceiling of the library is glass, so it is open, but the lighting is the same. <br> 
 
-Also, the main goal of the project is to measure social distance, so the spread of corona in poorly ventilated areas is more serious than outdoors. So I decided that the COEX library is the most suitable. <br> <br>
+Also, the main goal of the project is to measure social distance, so the spread of corona in poorly ventilated areas is more serious than outdoors. So I decided that the COEX library is the most suitable. <br> 
 
-The test was conducted in several places besides Stade. Although it was purchased as POSCO (?) Tessa, it was not suitable as a test site to check whether there were no angles or whether the lighting was emotional. Also, if you do it through the window, the tree in front of you will reduce the recognition rate of people. <br> <br>
+The test was conducted in several places besides Stade. Although it was purchased as POSCO (?) Tessa, it was not suitable as a test site to check whether there were no angles or whether the lighting was emotional. Also, if you do it through the window, the tree in front of you will reduce the recognition rate of people. <br>
 
 # Yo, man' Clean up the files...
 As you know, I tried to do something wrong, but it suddenly didn't work. So I am uploading the dump file because it will be a waste of time.
@@ -175,4 +176,3 @@ As you know, I tried to do something wrong, but it suddenly didn't work. So I am
 I'm writing it in case you get misunderstood. As you can see here, there are so many CSS files that there are many CSS codes, but the actual amount of code used is very small.
 
 January 16, 2021. I cleaned up the file, but I think there are still more unnecessary files. It is configured continuously.
-
