@@ -1,0 +1,6 @@
+svb filter=lfs diff=lfs merge=lfs -text
+Iot_Contest filter=lfs diff=lfs merge=lfs -text
+models filter=lfs diff=lfs merge=lfs -text
+output filter=lfs diff=lfs merge=lfs -text
+output_vid filter=lfs diff=lfs merge=lfs -text
+static filter=lfs diff=lfs merge=lfs -text
